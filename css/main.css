@@ -1,0 +1,718 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+/* ********************** 공통영역 선언시작 ************************** */
+
+/* Layout Setting */
+.container{height: 100%; padding: 105px 0;}
+#about .container{padding-bottom: 0;}
+
+#navi{margin-bottom: 0;}
+#navi .container{padding: 0;}
+#services, #news{background-color: #f6f7f8;}
+#contact{background-color: #26313c; color: #fff;}
+
+.btn-red{
+  display: block;
+  width: 170px; height: 42px;
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+  background: #ff0200;
+  background: -moz-linear-gradient(left, #ff0200 0%, #fc3f03 100%);
+  background: -webkit-linear-gradient(left, #ff0200 0%,#fc3f03 100%);
+  background: linear-gradient(to right, #ff0200 0%,#fc3f03 100%); 
+  border-radius: 21px;
+  margin: 0 auto;
+}
+.btn-red:hover{
+  text-decoration: none;
+  color: #fff;
+  background: #ff0200;
+  background: -moz-linear-gradient(left, #fc3f03 0%, #ff0200 100%);
+  background: -webkit-linear-gradient(left, #fc3f03 0%,#ff0200 100%);
+  background: linear-gradient(to right, #fc3f03 0%,#ff0200 100%);
+}
+
+
+
+/* jarallax CSS */
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* bxSlider Reset */
+.bx-wrapper{
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+  border: 0;
+  background-color: #f2f2f2;
+}
+
+/* Covervid Video CSS */
+.covervid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.covervid-wrapper video{
+  object-fit: cover;
+}
+
+/* ********************** 개별영역 선언시작 ************************** */
+/* ********** Navigation Area Start ************ */
+#navi{ 
+  width: 100%; height: 63px;
+  background-color: transparent;
+  position: absolute; left: 0; top: 0;
+  margin: 0;
+  border: 0; border-radius: 0;
+  z-index: 100;
+}
+
+/* Site Logo */
+#navi h1{
+  display: inline-block;
+  width: 180px; height: 35px;
+  margin-top: 5px;
+}
+#navi h1 a img{
+  width: 100%; height: 100%;
+}
+
+/* gnb */
+#navi .gnb{
+  float: right;
+  width: 550px;
+  margin-right: 10px;
+}
+#navi .gnb>ul>li{
+  float: left;
+  margin: 21px 0 0 25px;
+}
+#navi .gnb>ul>li>a{
+  color: #fff;
+}
+#navi .gnb>ul>li>a:hover{
+  color: red; 
+  text-decoration: none;
+}
+#navi .gnb>ul>li>a:focus{
+  text-decoration: none;
+}
+
+/* menu-language */
+#navi .gnb .menu-language ul {
+  display: none;
+  width: 100px; height: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-indent: 10px;
+  border-top: 1px solid #fff;
+  margin-top: 21px;
+}
+#navi .gnb .menu-language ul>li {
+  padding: 10px;
+}
+#navi .gnb .menu-language ul>li>a:hover {
+  text-decoration: none;
+  color: red;
+}
+#navi .gnb .menu-language ul>li>a:focus{
+  text-decoration: none;
+}
+
+/* q-menu-btn */
+#navi .q-menu-btn{
+  color: #fff;
+  font-size: 2.5rem;
+  float: right;
+  margin-top: 10px;
+}
+
+/* hidden gnb start */
+#navi .gnb-hidden {
+  display: block;
+  width: 40%; height: 100vh;
+  position: fixed; top: 0; right: -100%;
+  z-index: 20;
+  background-color: #ef231e;
+}
+/* close btn */
+#navi .gnb-hidden .close-btn {
+  display: block;
+  width: 25px; height: 25px;
+  position: absolute; right: 40px; top: 20px;
+}
+#navi .gnb-hidden .close-btn span{
+  display: block;
+  width: 25px; height: 2px;
+  background-color: #fff;
+  position: absolute; right: 0; top: 12px;
+}
+#navi .gnb-hidden .close-btn span:first-child{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#navi .gnb-hidden .close-btn span:last-child{
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* gnb-hidden list*/
+#navi .gnb-hidden>ul{
+  margin: 15% 0 0 10%;
+}
+#navi .gnb-hidden>ul>li{
+  margin-bottom: 30px;
+}
+#navi .gnb-hidden>ul>li>a{
+  font: 400 2.2rem 'Nanum Gothic', sans-serif;
+  color: #fff;
+}
+#navi .gnb-hidden>ul>li>a:hover{
+  text-decoration: none;
+}
+#navi .gnb-hidden>ul>li>a:focus{
+  text-decoration: none;
+}
+#navi .gnb-hidden>ul ul{
+  width: 100%; height: auto;
+  display: none;
+}
+#navi .gnb-hidden>ul ul>li {
+  margin: 10px 0 15px 20px;
+}
+#navi .gnb-hidden>ul ul>li>a {
+  font: 400 2.2rem 'Nanum Gothic', sans-serif;
+  color: #fff;
+}
+#navi .gnb-hidden>ul ul>li>a:hover{
+  text-decoration: none;
+}
+#navi .gnb-hidden>ul ul>li>a:focus{
+  text-decoration: none;
+}
+#navi .gnb-hidden .menu-language-hidden i {
+  padding-left: 50%;
+}
+/* facebook */
+#navi .gnb-hidden .facebook-gnb {
+  display: block;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  margin: 0 0 1% 12%;
+  color: #fff;
+  font-size: 1.5rem;
+}
+/* copyright */
+#navi .gnb-hidden .copyright {
+  margin-left: 10%;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* hidden-cover */
+#navi .hidden-cover{
+  width: 100%; height: 100vh;
+  position: fixed; left: 100%; top: 0;
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+
+
+/* 흰색 네비게이션 활성화 클래스 */
+.fixed{
+  position: fixed !important;
+  background-color: #fff !important;
+  box-shadow: 0 1px 10px 1px !important;
+}
+.fixed .gnb a,
+.fixed .q-menu-btn>i,
+.fixed .menu-language a>i {
+  color: #333 !important;
+}
+.fixed .gnb a:hover,
+.fixed .gnb a:hover i,
+.fixed .q-menu-btn:hover i {
+  color: red !important;
+}
+
+
+
+
+
+/* ********** Intro Area Start ************ */
+#intro{ width: 100%; height: 100vh; position: relative;}
+#intro .title-box{
+  width: 640px; height: 168px; 
+  text-align: center; z-index: 10; color: #fff;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#intro .title-box h2{
+  width: 100%; height: 63px; margin-bottom: 42px;
+  font: 700 5.5rem/63px 'Nanum Gothic', sans-serif;
+}
+#intro .title-box p{
+  width: 100%; height: 42px; margin-bottom: 42px;
+  font: bold 2.4rem 'Nanum Gothic', sans-serif;
+}
+#intro .scroll-down{
+  position: absolute;
+  left: 47%; bottom: 2%;
+  z-index: 10;
+  color: #fff;
+}
+#intro .scroll-down:hover{
+  text-decoration: none;
+}
+
+
+
+
+/* ***************** About Area Start ****************** */
+#about .left-box{
+  padding: 0 5%;
+}
+#about .left-box h2{
+  font: bold 2rem/1.5 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+}
+#about .left-box p{
+  font: 400 1.4rem/1.5 'Nanum Gothic', sans-serif;
+}
+#about .right-box{
+  text-align: left;
+}
+#about .slider {
+  width: 100%; height: 31px;
+  margin: 63px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+
+/* ***************** Service Area Start ****************** */
+#services .middle-box{
+  text-align: center;
+}
+
+#services .service-title {
+  text-align: right;
+  padding-bottom: 105px;
+  font: 400 2.5rem 'Nanum Gothic', sans-serif; 
+}
+
+#services .left-box{
+  margin-top: 15%;
+  text-align: right;
+  padding-right: 20px;
+}
+#services .left-box h3{
+  font: bold 1.8rem/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#services .left-box .btn-red{
+  margin: 42px 0 0 auto;
+}
+
+#services .right-box{
+  margin-top: 15%;
+  text-align: left;
+  padding-left: 20px;
+}
+#services .right-box h3{
+  font: bold 1.8rem/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#services .right-box .btn-red{
+  margin: 42px auto 0 0;
+}
+
+
+/* ********** Banner Area Start ************ */
+#banner{
+  background-image: url(../images/lg/parallex-bg.jpg);
+  text-align: center; 
+  color: #fff;
+  height: 490px;
+}
+#banner .row>div{
+  margin-top: 200px;
+  font: 400 1.4rem/21px 'Nanum Gothic', sans-serif;
+}
+#banner .row>div strong{
+  display: block;
+  margin-bottom: 21px;
+  font: bold 6rem/21px 'Nanum Gothic', sans-serif;
+}
+
+
+
+
+
+/* ********** news Area Start ************ */
+#news h2 {
+  font: bold 2.4rem 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px; 
+  text-align: center;
+}
+#news .news-box{
+  margin: 0 auto;
+}
+#news .news-box .img-box img{
+  display: block;
+  width: 100%; height: 100%;
+}
+#news .news-box:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+#news .news-box:hover h3 {
+  color: red;
+}
+#news .news-box .text-box{
+ height: auto;
+ padding: 42px 21px; 
+ background-color: #fff;
+ box-shadow: 1px 1px 4px 1px #c8c8c8, -1px 0px 4px 1px #c8c8c8;
+}
+#news .text-box h3{
+  font: 400 1.8rem/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#news .news-box {
+  padding: 0 15px;
+}
+#news .news-box .img-box{
+  height: 203px;
+  overflow: hidden;
+}
+
+
+
+
+/* ********** Contact Area Start ************ */
+#contact h1{
+  width: 180px; height: 35px;
+  margin-bottom: 21px;
+}
+#contact h1 a img{
+  display: block;
+  width: 100%; height: 100%;
+}
+
+/* facebook-contact */
+#contact .facebook-contact{
+  display: block;
+  margin: 21px 0 0 15px;
+  position: relative;
+}
+#contact .facebook-contact i {
+  font-size: 20px;
+  color: #fff;
+}
+#contact .facebook-contact i::after{
+  content: ''; display: block;
+  position: absolute; left: -10px; top: -6px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+/* navi-contact */
+#contact .navi-contact h2{
+  font: 400 2.4rem/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#contact .navi-contact ul li{
+  margin-bottom: 21px;
+}
+#contact .navi-contact ul li a{
+  font: 400 1.4rem/21px 'Nanum Gothic', sans-serif;
+  color: #fff;;
+}
+#contact .navi-contact a:hover{
+  text-decoration: none;
+}
+#contact .navi-contact a:hover span{
+  color: red;
+}
+#contact .navi-contact ul li:last-child{
+  margin-bottom: 150px;
+}
+
+/* form */
+#contact .form-contact h2{
+  font: 400 2.4rem/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#contact .form-horizontal{
+  width: 370px;
+}
+#contact .form-horizontal .form-group {
+  margin-left: 0;
+}
+#contact .form-horizontal>div>div input,
+#contact .form-horizontal select,
+#contact .form-horizontal textarea{
+  width: 100%; height: 42px;
+  border-radius: 5px;
+  border: 0;
+  text-indent: 10px;
+  color: #333;
+}
+#contact .form-horizontal select{ /*select 화살표 없애기*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+#contact .form-horizontal textarea{
+  width: 100%; height: 105px;
+  padding-top: 10px;
+}
+#contact .form-horizontal .btn-red{
+  width: 100%; height: 42px;
+  margin: 0;
+  border: 0;
+}
+#contact .terms{
+  margin-top: 21px;
+}
+
+
+
+/* ***************** Footer Area Start ****************** */
+#footer{height: 63px; text-align: center;}
+#footer .container { padding: 21px 0; }
+
+
+/* 맨위로가기 버튼 */
+.top-btn{
+  display: block;
+  width: 40px; height: 40px;
+  position: fixed; right: 20px; bottom: 80px;
+}
+.top-btn i {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* ******************** Media Query Area Start ************************ */
+@media screen and (max-width: 1200px){
+  /* navi Area Start */
+  #navi .gnb-hidden>ul>li>a,
+  #navi .gnb-hidden>ul ul>li>a {
+    font-size: 1.8rem;
+  }
+
+  /* services Area Start */
+  #services .service-title {
+    font: 400 2rem 'Nanum Gothic', sans-serif; 
+  }
+
+  /* banner Area Start */
+  #banner{
+    height: 483px;
+  }
+
+  /* news Area Start */
+  #news .news-box {
+    margin-bottom: 21px;
+  }
+  #news .news-box .img-box{
+    height: 300px;
+  }
+
+  /* contact Area Start */
+  #contact .row{
+    margin: 0 30px;
+  }
+  #contact .navi-contact ul li:last-child{
+    margin-bottom: 150px;
+  }
+  #contact .form-horizontal{
+    width: 300px;
+  }
+}
+
+/* ************ Mobile Area Start ************ */
+@media screen and (max-width: 991px){
+  /* navi Area Start */
+  #navi .gnb-hidden {
+    width: 50%;
+  }
+  #navi .gnb-hidden>ul>li>a,
+  #navi .gnb-hidden>ul ul>li>a {
+    font-size: 1.6rem;
+  }
+  #navi{
+    background-color: rgba(0, 0, 0, 50%);
+  }
+  #navi h1{
+    margin-top: 8px;
+  }
+  #navi .gnb{
+    display: none;
+  }
+  #navi .q-menu-btn{
+    margin-top: 8px;
+  }
+
+  /* services Area Start */
+  #services .right-box{
+    padding-left: 45px;
+  }
+
+  /* banner Area Start */
+  #banner .row>div{
+    margin-top: 100px;
+  }
+
+  /* news Area Start */
+  #news .news-box .img-box{
+    height: 191px;
+  }
+
+  /* contact Area Start */
+  #contact .info-contact{
+    margin-bottom: 63px;
+  }
+  #contact .navi-contact ul li:last-child{
+    margin-bottom: 200px;
+  }
+}
+
+/* ************ Mobile Area Start ************ */
+@media screen and (min-width: 768px) and (max-width: 959px){
+
+}
+
+/* ************ Mobile Area Start ************ */
+@media screen and (max-width: 767px){
+  /* navi Area Start */
+  #navi .gnb-hidden {
+    width: 80%;
+  }
+  #navi h1{
+    margin: 8px 0 0 20px;
+  }
+  #navi .q-menu-btn{
+    margin: 8px 20px 0 0;
+  }
+
+  /* intro Area Start */
+  #intro .title-box h2{
+    font: 700 3rem/63px 'Nanum Gothic', sans-serif;
+  }
+  #intro .title-box p{
+    font: bold 1.4rem 'Nanum Gothic', sans-serif;
+  }
+
+  /* about Area Start */
+  #about .left-box,
+  #about .right-box{
+    text-align: center;
+  }
+  #about .left-box{
+    margin-bottom: 21px;
+  }
+
+  /* services Area Start */
+  #services .service-title {
+    text-align: center;
+    font: 400 1.8rem 'Nanum Gothic', sans-serif; 
+    padding-bottom: 63px;
+  }
+  #services .left-box{
+    margin: 0 0 63px 0;
+    text-align: center;
+  }
+  #services .right-box{
+    margin-top: 63px;
+    text-align: center;
+    padding-left: 0;
+  }
+  #services .left-box .btn-red,
+  #services .right-box .btn-red{
+    margin: 42px auto 0 auto;
+  }
+
+  /* banner Area Start */
+  #banner{
+    height: 800px;
+  }
+
+  /* news Area Start */
+  #news .news-box {
+    margin-bottom: 21px;
+    padding: 0 15%;
+  }
+  #news .news-box .img-box{
+    height: 296px;
+  }
+
+  /* contact Area Start */
+  #contact .row{
+    margin-left: 30px;
+  }
+  #contact .navi-contact ul li:last-child{
+    margin-bottom: 63px;
+  }
+}
+
+/* ************ Mobile Area Start ************ */
+@media screen and (max-width: 500px){
+  /* navi Area Start */
+  #navi .gnb-hidden {
+    width: 100%;
+  }
+  #navi .gnb-hidden>ul>li>a,
+  #navi .gnb-hidden>ul ul>li>a {
+    font-size: 1.4rem;
+  }
+
+  /* news Area Start */
+  #news .news-box .img-box{
+    height: 191px;
+  }
+}
+
