@@ -52,7 +52,7 @@ $(function(){
     gnb_hidden.animate({'right': '-' + 100 + '%'}, 400);
     hidden_cover.css('left', '-' + 100 + '%');
     $('body').css('overflow-y', 'scroll');
-    $('body').css('overflow-x', 'hidden');
+    $('body').css('overflow-x', 'hidden');  // 가로 스크롤이 생겨서 추가함
   });
   hidden_menu_item.click(function(){
     var el = $(this).attr('href');
@@ -60,14 +60,14 @@ $(function(){
       gnb_hidden.animate({'right': '-' + 100 + '%'}, 400);
       hidden_cover.css('left', '-' + 100 + '%');
       $('body').css('overflow-y', 'scroll');
-      $('body').css('overflow-x', 'hidden');
+      $('body').css('overflow-x', 'hidden');  // 가로 스크롤이 생겨서 추가함
     }
   });
   hidden_cover.click(function(){
     gnb_hidden.animate({'right': '-' + 100 + '%'}, 400);
     hidden_cover.css('left', '-' + 100 + '%');
     $('body').css('overflow', 'scroll');
-    $('body').css('overflow-x', 'hidden');
+    $('body').css('overflow-x', 'hidden');  // 가로 스크롤이 생겨서 추가함
   });
 
 
@@ -82,7 +82,6 @@ $(function(){
     if(scrollPos > 300){
       navi.addClass('fixed');
       logo.attr('src', '../images/logo/logo_red.png');
-      // TweenMax.fromTo(navi, 0.2, {top: -50}, {top: 0});
     }else{
       $('#navi').removeClass('fixed');
       logo.attr('src', '../images/logo/logo_white.png');
